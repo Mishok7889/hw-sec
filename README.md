@@ -36,10 +36,15 @@ Install the pieces yourself if you would rather not pull in WSL.
    python -m pip install -e .
    python -m pip install -r jupyter/requirements.txt
    ```
-2. **Compiler.** Install the
+2. **Compiler.** Quickest with [Chocolatey](https://chocolatey.org/install) (admin PowerShell) - it
+   installs both and puts them on PATH:
+   ```powershell
+   choco install gcc-arm-embedded make -y
+   ```
+   Alternatives: Scoop (no admin) `scoop install gcc-arm-none-eabi make`, or by hand - the
    [GNU Arm Embedded toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads)
-   and a `make` (ships with the [avr-gcc builds](https://blog.zakkemble.net/avr-gcc-builds/), or
-   `pacman -S make` under MSYS2). Put each `bin` folder on PATH, then verify in Git Bash:
+   plus a `make` from the [avr-gcc builds](https://blog.zakkemble.net/avr-gcc-builds/), each `bin` added
+   to PATH. Restart the terminal and VS Code so the new PATH is picked up, then verify in Git Bash:
    ```bash
    arm-none-eabi-gcc --version
    make --version
