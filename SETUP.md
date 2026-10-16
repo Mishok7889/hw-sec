@@ -113,17 +113,12 @@ need `jupyter_bokeh`: `python -m pip install jupyter_bokeh` into the same env, t
 ## If flashing fails
 
 If `cw.program_target(...)` errors or the target stops responding after a flash, the SAM4S has usually
-dropped into its SAM-BA bootloader. Reflash it from a notebook cell:
+dropped into its SAM-BA bootloader. Reflash it from a notebook cell, then re-run the setup and flash cells:
 
 ```python
-import chipwhisperer as cw
-if cw.get_at91_ports():
-    cw.program_sam_firmware(hardware_type='cwhusky')   # board is in the bootloader - reflash it
-else:
-    print("Device healthy (no SAM-BA bootloader port) - nothing to recover.")
+cw.program_sam_firmware(hardware_type='cwhusky')   # board is in the bootloader - reflash it
 ```
 
-`program_sam_firmware` raises `OSError` on a board that is *not* in the bootloader, which would halt a
-Run All, so the `get_at91_ports()` guard is what makes this safe to leave at the top of a lab. After it
-runs, re-run the setup and flash cells.
+This and a couple of other quick checks are runnable in
+[`week-05/troubleshooting.ipynb`](week-05/troubleshooting.ipynb).
 
