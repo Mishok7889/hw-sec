@@ -14,12 +14,11 @@ clone this repo and open it in VS Code. Official docs:
 
 ### Windows - bundled installer (recommended)
 
-One `.exe` that ships its own Python, installs ChipWhisperer + Jupyter, and sets up the compilers (via
-WSL) in a single step. Grab the newest `Setup.64-bit.exe` from the
+Download the newest `Setup.64-bit.exe` from the
 [Releases page](https://github.com/newaetech/chipwhisperer/releases) (the course was built on
-[`v6.0.0`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe)),
-and install it into your home folder - not `C:\Program Files`. It creates a `cwenv` environment (that is
-the kernel you pick in VS Code) plus Start-menu shortcuts and an uninstaller.
+[`v6.0.0`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe))
+and install it into your home folder, not `C:\Program Files` - it sets up everything in one step: its own
+Python (the `cwenv` kernel you pick in VS Code), ChipWhisperer, Jupyter, and the compilers via WSL.
 
 The Husky driver installs automatically on Windows 10/11 (WCID); no Zadig.
 
