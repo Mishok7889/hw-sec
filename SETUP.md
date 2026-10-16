@@ -55,7 +55,32 @@ Neither piece needs WSL.
    python -m pip install -r jupyter/requirements.txt
    ```
 
-## This repo in VS Code (both OSes)
+## Linux
+
+1. **Toolchain + libusb** (Debian/Ubuntu):
+   ```bash
+   sudo apt install python3-pip git gcc-arm-none-eabi make libusb-1.0-0-dev
+   ```
+2. **USB access.** Add a udev rule so you can reach the Husky without root. Create
+   `/etc/udev/rules.d/50-newae.rules` with one line:
+   ```
+   SUBSYSTEMS=="usb", ATTRS{idVendor}=="2b3e", ATTRS{idProduct}=="ace5", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+   ```
+   Reload the rules and make sure you are in the `plugdev` group:
+   ```bash
+   sudo udevadm control --reload-rules && sudo udevadm trigger
+   sudo usermod -aG plugdev $USER   # log out and back in for this to take effect
+   ```
+3. **ChipWhisperer:**
+   ```bash
+   git clone https://github.com/newaetech/chipwhisperer
+   cd chipwhisperer
+   git submodule update --init jupyter
+   python -m pip install -e .
+   python -m pip install -r jupyter/requirements.txt
+   ```
+
+## This repo in VS Code (all OSes)
 
 1. Clone it:
    ```bash
