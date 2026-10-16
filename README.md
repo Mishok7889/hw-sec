@@ -1,8 +1,12 @@
 # hw-sec
 
-Fault-injection labs for the **ChipWhisperer-Husky + CW312T-SAM4S** (NaUKMA Hardware Security),
-organized by course week. `week-05/` glitches a 2500-count loop on the target: `01` over the clock,
-`02` over the power rail (crowbar).
+Hands-on hardware-security labs for the **ChipWhisperer-Husky + CW312T-SAM4S** (NaUKMA Hardware
+Security), one folder per course week. New weeks are added as the course runs.
+
+Available now:
+
+- **`week-05/`** - first glitch: fault-injection on a 2500-count loop, `01` over the clock, `02` over the
+  power rail (crowbar).
 
 ## Setup
 
