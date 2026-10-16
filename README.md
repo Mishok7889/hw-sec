@@ -6,12 +6,8 @@ organized by course week. `week-05/` glitches a 2500-count loop on the target: `
 
 ## Install (once)
 
-1. Install ChipWhisperer with the ARM build toolchain, so `make` can build firmware from a notebook
-   `%%bash` cell - [docs](https://chipwhisperer.readthedocs.io/en/latest/getting-started.html)
-   ([Windows](https://chipwhisperer.readthedocs.io/en/latest/windows-install.html),
-   [macOS](https://chipwhisperer.readthedocs.io/en/latest/mac-install.html)).
-2. `git clone https://github.com/Mishok7889/hw-sec`
-3. Open the folder in VS Code and add the **Jupyter** extension.
+Set up ChipWhisperer, the ARM build toolchain, this repo, and VS Code - full steps in
+[SETUP.md](SETUP.md).
 
 ## Run
 
