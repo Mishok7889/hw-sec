@@ -15,8 +15,7 @@ organized by course week. `week-05/` glitches a 2500-count loop on the target: `
 
 ## Run
 
-1. Plug in the Husky. For `02`, also connect the Husky **Crowbar** SMA to either CW313 SMA.
-2. Open a notebook in `week-05/`, pick the kernel = the Python env where ChipWhisperer is installed.
-3. Run all cells top to bottom.
+1. Open a notebook in `week-05/`, pick the kernel = the Python env where ChipWhisperer is installed.
+2. Run all cells top to bottom.
 
 The notebooks locate your ChipWhisperer install themselves, so this repo can live anywhere.
