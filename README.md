@@ -36,10 +36,11 @@ Neither piece needs WSL.
    not to flash a prebuilt `.hex`.
 3. **Driver.** Windows 10/11 installs the Husky driver automatically (WCID); no Zadig.
 
-> The bundled `Chipwhisperer.vX.Y.Z.exe` installer is simpler but pulls in WSL for the compilers. The
-> steps above avoid WSL; the notebooks' `%%bash` build cell works either way. If you use the installer,
-> install into your home folder (not `C:\Program Files`).
-> [Releases](https://github.com/newaetech/chipwhisperer/releases).
+> The bundled installer is simpler but pulls in WSL for the compilers. The steps above avoid WSL; the
+> notebooks' `%%bash` build cell works either way. If you use it, download
+> [`Chipwhisperer.v6.0.0.Setup.64-bit.exe`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe)
+> ([all releases](https://github.com/newaetech/chipwhisperer/releases)) and install into your home folder
+> (not `C:\Program Files`).
 
 ### macOS
 
