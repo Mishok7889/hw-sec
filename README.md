@@ -3,11 +3,6 @@
 Hands-on hardware-security labs for the **ChipWhisperer-Husky + CW312T-SAM4S** (NaUKMA Hardware
 Security), one folder per course week. New weeks are added as the course runs.
 
-Available now:
-
-- **`week-05/`** - first glitch: fault-injection on a 2500-count loop, `01` over the clock, `02` over the
-  power rail (crowbar).
-
 ## Setup
 
 From a bare machine to a notebook in `week-05/` that talks to the Husky. You need two pieces: the
