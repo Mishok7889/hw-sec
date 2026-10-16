@@ -20,6 +20,9 @@ Download the newest `Setup.64-bit.exe` from the
 and install it into your home folder, not `C:\Program Files` - it sets up everything in one step: its own
 Python (the `cwenv` kernel you pick in VS Code), ChipWhisperer, Jupyter, and the compilers via WSL.
 
+It lands at `%USERPROFILE%\ChipWhisperer\cwenv` (i.e. `C:\Users\<you>\ChipWhisperer\cwenv`); the kernel to
+select in VS Code is its interpreter, `%USERPROFILE%\ChipWhisperer\cwenv\Scripts\python.exe`.
+
 The Husky driver installs automatically on Windows 10/11 (WCID); no Zadig.
 
 ### Windows - manual install (alternative, no WSL)
