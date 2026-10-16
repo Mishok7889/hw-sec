@@ -12,9 +12,20 @@ clone this repo and open it in VS Code. Official docs:
 [Windows](https://chipwhisperer.readthedocs.io/en/latest/windows-install.html),
 [macOS](https://chipwhisperer.readthedocs.io/en/latest/mac-install.html).
 
-### Windows
+### Windows - bundled installer (recommended)
 
-Neither piece needs WSL.
+One `.exe` that ships its own Python, installs ChipWhisperer + Jupyter, and sets up the compilers (via
+WSL) in a single step. Grab the newest `Setup.64-bit.exe` from the
+[Releases page](https://github.com/newaetech/chipwhisperer/releases) (the course was built on
+[`v6.0.0`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe)),
+and install it into your home folder - not `C:\Program Files`. It creates a `cwenv` environment (that is
+the kernel you pick in VS Code) plus Start-menu shortcuts and an uninstaller.
+
+The Husky driver installs automatically on Windows 10/11 (WCID); no Zadig.
+
+### Windows - manual install (alternative, no WSL)
+
+Install the pieces yourself if you would rather not pull in WSL.
 
 1. **Software.** Install Python 3.9+ and [Git](https://git-scm.com/downloads). In Git Bash:
    ```bash
@@ -34,13 +45,9 @@ Neither piece needs WSL.
    ```
    SAM4S needs only `arm-none-eabi-gcc` and `make`. A compiler is required only to *build* firmware,
    not to flash a prebuilt `.hex`.
-3. **Driver.** Windows 10/11 installs the Husky driver automatically (WCID); no Zadig.
 
-> The bundled installer is simpler but pulls in WSL for the compilers. The steps above avoid WSL; the
-> notebooks' `%%bash` build cell works either way. If you use it, grab the newest `Setup.64-bit.exe` from
-> the [Releases page](https://github.com/newaetech/chipwhisperer/releases) (the course was built on
-> [`v6.0.0`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe))
-> and install into your home folder (not `C:\Program Files`).
+The notebooks' `%%bash` build cell works either way - whether the toolchain came via WSL (installer) or
+a native Git-Bash PATH (manual).
 
 ### macOS
 
