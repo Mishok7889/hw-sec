@@ -105,8 +105,9 @@ scope = cw.scope()
 print(scope)          # Husky detected
 ```
 
-If it reports the firmware is out of date, update it (see the docs). The live maps in the notebooks
-need `jupyter_bokeh`: `python -m pip install jupyter_bokeh` into the same env, then restart the kernel.
+If it reports the firmware is out of date, update it (see [`troubleshooting.ipynb`](troubleshooting.ipynb)).
+The live maps in the notebooks need `jupyter_bokeh`: `python -m pip install jupyter_bokeh` into the same
+env, then restart the kernel.
 
 **End state:** a notebook that talks to the Husky.
 
@@ -119,6 +120,6 @@ dropped into its SAM-BA bootloader. Reflash it from a notebook cell, then re-run
 cw.program_sam_firmware(hardware_type='cwhusky')   # board is in the bootloader - reflash it
 ```
 
-This and a couple of other quick checks are runnable in
-[`week-05/troubleshooting.ipynb`](week-05/troubleshooting.ipynb).
+This, firmware updates, and a couple of other quick checks are runnable in
+[`troubleshooting.ipynb`](troubleshooting.ipynb).
 
