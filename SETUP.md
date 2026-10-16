@@ -109,3 +109,21 @@ If it reports the firmware is out of date, update it (see the docs). The live ma
 need `jupyter_bokeh`: `python -m pip install jupyter_bokeh` into the same env, then restart the kernel.
 
 **End state:** a notebook that talks to the Husky.
+
+## If flashing fails
+
+If `cw.program_target(...)` errors or the target stops responding after a flash, the SAM4S has usually
+dropped into its SAM-BA bootloader. Reflash it from a notebook cell:
+
+```python
+import chipwhisperer as cw
+if cw.get_at91_ports():
+    cw.program_sam_firmware(hardware_type='cwhusky')   # board is in the bootloader - reflash it
+else:
+    print("Device healthy (no SAM-BA bootloader port) - nothing to recover.")
+```
+
+`program_sam_firmware` raises `OSError` on a board that is *not* in the bootloader, which would halt a
+Run All, so the `get_at91_ports()` guard is what makes this safe to leave at the top of a lab. After it
+runs, re-run the setup and flash cells.
+
