@@ -86,10 +86,15 @@ Neither piece needs WSL.
    ```bash
    git clone https://github.com/Mishok7889/hw-sec
    ```
-2. Install [VS Code](https://code.visualstudio.com) and its **Python** (`ms-python.python`) and
+2. Install the labs' extra packages into the **same env** where ChipWhisperer lives:
+   ```bash
+   cd hw-sec
+   python -m pip install -r requirements.txt   # or:  uv pip install -r requirements.txt
+   ```
+3. Install [VS Code](https://code.visualstudio.com) and its **Python** (`ms-python.python`) and
    **Jupyter** (`ms-toolsai.jupyter`) extensions.
-3. **File -> Open Folder** on `hw-sec`.
-4. Open a notebook in `week-05/`. Top-right, **Select Kernel** -> the Python env where you installed
+4. **File -> Open Folder** on `hw-sec`.
+5. Open a notebook in `week-05/`. Top-right, **Select Kernel** -> the Python env where you installed
    ChipWhisperer (your venv / pyenv / conda env). Getting the kernel right is the one thing people miss:
    if `import chipwhisperer` fails, you picked the wrong one.
 
@@ -106,8 +111,6 @@ print(scope)          # Husky detected
 ```
 
 If it reports the firmware is out of date, update it (see [`troubleshooting.ipynb`](troubleshooting.ipynb)).
-The live maps in the notebooks need `jupyter_bokeh`: `python -m pip install jupyter_bokeh` into the same
-env, then restart the kernel.
 
 **End state:** a notebook that talks to the Husky.
 

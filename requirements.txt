@@ -1,0 +1,9 @@
+# Extra Python packages the labs need on top of a ChipWhisperer install (see SETUP.md).
+# Install into the SAME environment where ChipWhisperer lives:
+#   python -m pip install -r requirements.txt
+#   # or, with uv:  uv pip install -r requirements.txt
+#
+# ChipWhisperer itself is NOT listed here: it is installed from its own git clone
+# (the firmware build cell needs that clone), per SETUP.md.
+
+jupyter_bokeh>=4.0   # live bokeh maps (BokehModel) stream per-shot in VS Code
