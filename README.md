@@ -37,10 +37,10 @@ Neither piece needs WSL.
 3. **Driver.** Windows 10/11 installs the Husky driver automatically (WCID); no Zadig.
 
 > The bundled installer is simpler but pulls in WSL for the compilers. The steps above avoid WSL; the
-> notebooks' `%%bash` build cell works either way. If you use it, download
-> [`Chipwhisperer.v6.0.0.Setup.64-bit.exe`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe)
-> ([all releases](https://github.com/newaetech/chipwhisperer/releases)) and install into your home folder
-> (not `C:\Program Files`).
+> notebooks' `%%bash` build cell works either way. If you use it, grab the newest `Setup.64-bit.exe` from
+> the [Releases page](https://github.com/newaetech/chipwhisperer/releases) (the course was built on
+> [`v6.0.0`](https://github.com/newaetech/chipwhisperer/releases/download/v6.0.0b/Chipwhisperer.v6.0.0.Setup.64-bit.exe))
+> and install into your home folder (not `C:\Program Files`).
 
 ### macOS
 
